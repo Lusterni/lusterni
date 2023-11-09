@@ -1,0 +1,121 @@
+{
+    "settings": {
+        "options": {
+            "show_on_front": "posts",
+            "featured-content": false,
+            "jetpack_global_styles": false
+        },
+        "theme_mods": {
+            "0": false,
+            "nav_menu_locations": [],
+            "custom_css_post_id": -1
+        },
+        "headstart": {
+            "mapped_id_options": [],
+            "mapped_id_theme_mods": [],
+            "keep_submenu_items": true
+        }
+    },
+    "widgets": [],
+    "content": [
+        {
+            "post_type": "post",
+            "post_title": "Navigating Through Objects with Marcel Finnery",
+            "post_content": "<!-- wp:paragraph -->\n<p>Marcel Finnery's timeless and minimalist pieces toe the line between design and art. From sofas, tables, stools and decorative objects, these quintessential products are brought to life by a team of expert designers and craftsmen; each putting their cultural mark and their own contribution to the identity of the furniture collections.<\/p>\n<!-- \/wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>Finnery never fails displaying his furniture in the right places. Pale timbers are used for floors, furniture, and sliding barn doors, set within a timber grid. The practice has embraced a rustic and industrial DNA and playful urban mantra.<\/p>\n<!-- \/wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>Each design is intended as an anchor of utility. Complementing the studio\u2019s range of handmade designs are also objets trouv\u00e9s collected over the years, from furniture by iconic designers to unique vintage pieces. Together, they celebrate the story and history of several generations, while providing durable solutions for the ones to come.<\/p>\n<!-- \/wp:paragraph -->",
+            "post_name": "navigating-through-objects-with-marcel-finnery",
+            "post_excerpt": "",
+            "menu_order": 0,
+            "post_status": "publish",
+            "comment_status": "open",
+            "ping_status": "open",
+            "_starter_page_template": "",
+            "hs_old_id": 38,
+            "hs_post_parent": 0,
+            "hs_taxonomies": {
+                "category_name": [
+                    "Objects",
+                    "Tools"
+                ],
+                "post_tag_name": []
+            },
+            "hs_custom_meta": "_hs_extra",
+            "attachment_url": "https:\/\/muscatdemo.files.wordpress.com\/2022\/10\/leather-couch.jpg"
+        },
+        {
+            "post_type": "post",
+            "post_title": "A Return to Craftsmanship with Eve",
+            "post_content": "<!-- wp:paragraph -->\n<p>Founded by Eve Campbell in 2010, the British label is renowned for artisanal craftsmanship in leather objects. Paloma Loma evolved through Campbell\u2019s fusion of psychological study with her training as a handbagmaker, manually producing handbags and belts in a London workshop, with meticulous attention to detail.<\/p>\n<!-- \/wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>This formula for object handmaking has been continued in the development of the Eve by Paloma Loma line. Campbell presents a luxury take on the Ephemera and Beatrice models, slowing down their design and production processes to elevate classic shapes. Made with raw undyed leather uppers and replaceable straps, the handbags create an experience of timelessness and durability. By applying traditional methods to Eve, Paloma Loma perpetuates the wearer of the craft of handbagmaking.<\/p>\n<!-- \/wp:paragraph -->",
+            "post_name": "a-return-to-craftsmanship-with-loewe",
+            "post_excerpt": "",
+            "menu_order": 0,
+            "post_status": "publish",
+            "comment_status": "open",
+            "ping_status": "open",
+            "_starter_page_template": "",
+            "hs_old_id": 36,
+            "hs_post_parent": 0,
+            "hs_taxonomies": {
+                "category_name": [
+                    "Fashion",
+                    "Groundbreaking",
+                    "Tools"
+                ],
+                "post_tag_name": []
+            },
+            "hs_custom_meta": "_hs_extra",
+            "attachment_url": "https:\/\/muscatdemo.files.wordpress.com\/2022\/11\/ac558-stocksnap_dfdgn6q757-scaled-1.jpg"
+        },
+        {
+            "post_type": "post",
+            "post_title": "Lana Lam is Using Fashion as a Tool for Change",
+            "post_content": "<!-- wp:paragraph -->\n<p>The intricate work of Lana Lam has been broadly acclaimed as a testament to identity, and sustainable production. Made completely of repurposed fabric, her garments tell a sartorial story of joyful liberation. Each piece is totally handmade, a labor of love carrying the wisdom of a generationally passed down craft.<\/p>\n<!-- \/wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>As far as industries are concerned, fashion is one of those that pollute the most, mostly fast-fashion and its massive overproduction of clothing made with cheap materials. These clothes are usually worn a few times and then thrown away. The process that follows after we throw them away is the worst part. Many of these garments are made of materials that aren't decomposed easily, such as polyester, for instance, which takes approximately 200 years to degrade.<\/p>\n<!-- \/wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>Lana's work discusses the oft-overlooked ability of the fashion industry to shape and change societal norms, adjust societal perspective on accepted cultural practices and shift attitudes. It takes a lot to make a garment. Not just the bits we hear about but also the farmers, the ginners, spinners, weavers, sewers, artisans. It takes water, soil, seeds, land, forests, animals, electricity, oil, chemicals, metals and other precious natural resources to clothe us.<\/p>\n<!-- \/wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>With second hand markets on a rise, Lana believes much work has been done to make this a more mainstream practice.<\/p>\n<!-- \/wp:paragraph -->",
+            "post_name": "hello-world-2",
+            "post_excerpt": "",
+            "menu_order": 0,
+            "post_status": "publish",
+            "comment_status": "open",
+            "ping_status": "open",
+            "_starter_page_template": "",
+            "hs_old_id": 1,
+            "hs_post_parent": 0,
+            "hs_taxonomies": {
+                "category_name": [
+                    "Fashion",
+                    "Groundbreaking",
+                    "Tools"
+                ],
+                "post_tag_name": []
+            },
+            "hs_custom_meta": "_hs_extra",
+            "attachment_url": "https:\/\/muscatdemo.files.wordpress.com\/2022\/09\/4ad61-stocksnap_w7plc0kyvk-scaled-1-1.jpg"
+        },
+        {
+            "post_type": "page",
+            "post_title": "About",
+            "post_content": "<!-- wp:paragraph {\"style\":{\"typography\":{\"lineHeight\":1.4}},\"fontSize\":\"large\"} -->\n<p class=\"has-large-font-size\" style=\"line-height:1.4;\">My name is Aine Walsh and I'm a writer and curator of the ITN? digital publication.<\/p>\n<!-- \/wp:paragraph -->\n\n<!-- wp:paragraph {\"style\":{\"typography\":{\"lineHeight\":1.4}},\"fontSize\":\"large\"} -->\n<p class=\"has-large-font-size\" style=\"line-height:1.4;\">I'm always looking for collaborators, so feel free to submit an article to be featured on the site.<\/p>\n<!-- \/wp:paragraph -->\n\n<!-- wp:buttons -->\n<div class=\"wp-block-buttons\"><!-- wp:button -->\n<div class=\"wp-block-button\"><a class=\"wp-block-button__link wp-element-button\">Get In touch<\/a><\/div>\n<!-- \/wp:button --><\/div>\n<!-- \/wp:buttons -->",
+            "post_name": "sample-page",
+            "post_excerpt": "",
+            "menu_order": 0,
+            "post_status": "publish",
+            "comment_status": "closed",
+            "ping_status": "open",
+            "_starter_page_template": "",
+            "hs_old_id": 7,
+            "hs_post_parent": 0,
+            "hs_taxonomies": [],
+            "hs_custom_meta": "_hs_extra"
+        }
+    ],
+    "menus": [],
+    "images": [
+        "https:\/\/muscatdemo.files.wordpress.com\/2022\/10\/leather-couch.jpg",
+        "https:\/\/muscatdemo.files.wordpress.com\/2022\/09\/4ad61-stocksnap_w7plc0kyvk-scaled-1-1.jpg",
+        "https:\/\/muscatdemo.files.wordpress.com\/2022\/11\/ac558-stocksnap_dfdgn6q757-scaled-1.jpg"
+    ],
+    "meta": {
+        "blog_id": 212910252,
+        "url": "https:\/\/muscatdemo.wordpress.com",
+        "update_date": "November 30, 2022, 5:26 pm",
+        "update_timestamp": 1669829211
+    }
+}
