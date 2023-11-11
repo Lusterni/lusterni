@@ -1,0 +1,290 @@
+.ctc-coupon-header {
+    display: flex;
+    gap: 40px;
+}
+
+.ctc-coupon-image {
+    max-width: 160px;
+}
+
+.ctc-coupon-headings {
+    flex: 1;
+}
+
+/* .ctc-block.ctc-coupon .ctc-coupon-link {
+    text-decoration: none;
+    display: inline-block;
+    min-width: 280px;
+    border-radius: 4px;
+    cursor: pointer;
+} */
+
+/* .ctc-coupon-link:before {
+    content: attr(data-label);
+    position: absolute;
+    right: 20px;
+    left: 0;
+    background: #0170b9;
+    top: 0;
+    bottom: 0;
+    color: white;
+    border-radius: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.1s ease-in-out;
+} */
+
+/* .ctc-coupon-link .ctc-coupon-button {
+    position: absolute;
+    left: 0;
+    right: 30px;
+    top: 0;
+    bottom: 0;
+    z-index: 999;
+    background: #0170b9;
+    color: white;
+    border-radius: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.1s ease-in-out;
+}
+
+.ctc-coupon-link:hover .ctc-coupon-button {
+    right: 40px;
+}
+
+.ctc-coupon-link {
+    position: relative;
+} */
+/* 
+.ctc-coupon-code {
+    background: white;
+    color: black;
+    padding: 10px 10px;
+    display: block;
+    border-radius: inherit;
+    text-align: right;
+    border: 2px dashed #0170b9;
+} */
+
+/* .ctc-coupon-link:before {
+    content: attr(data-label);
+    position: absolute;
+    right: 20px;
+    left: 0;
+    background: #0170b9;
+    top: 0;
+    bottom: 0;
+    color: white;
+    border-radius: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.1s ease-in-out;
+}
+
+.ctc-coupon-link:hover:before {
+    right: 30px;
+} */
+
+.ctc-coupon .ctc-coupon-heading {
+    margin: 0;
+}
+
+.ctc-coupon .ctc-coupon-heading + .ctc-coupon-description {
+    margin-top: 10px;
+}
+
+.ctc-coupon .ctc-coupon-description p:last-child {
+    margin-bottom: 0;
+}
+
+.ctc-coupon-details {
+    margin: 0px 0 0 0;
+    border: 1px solid #bed3e9;
+    padding: 10px 20px;
+    background: #d7e7f8;
+    border-top: none;
+}
+
+.ctc-block.ctc-coupon .ctc-coupon-toggle-link {
+    text-decoration: none;
+    display: inline-block;
+    margin: 0;
+    font-size: 14px;
+    line-height: normal;
+}
+
+.ctc-coupon-header {
+    border: 1px solid #bed3e9;
+    padding: 20px;
+    background: #e4f1ff;
+}
+
+.ctc-details-content > ul:last-child,
+.ctc-details-content > p:last-child {
+    margin-bottom: 0;
+}
+
+.ctc-details-content {
+    padding: 5px 0;
+    font-size: 14px;
+}
+
+.ctc-toggle-details {
+    display: none;
+}
+
+.ctc-block.ctc-coupon .ctc-coupon-link {
+    text-decoration: none;
+    background: #0170b9;
+    color: white;
+    padding: 10px 30px;
+    display: inline-block;
+}
+
+/* 
+/** On Copy *
+.ctc-coupon-link-clicked {
+    display: flex;
+}
+
+.ctc-coupon-link-clicked.ctc-coupon-link .ctc-coupon-button {
+    position: relative;
+    padding: 10px 30px;
+}
+
+.ctc-block.ctc-coupon .ctc-coupon-link.ctc-coupon-link-clicked {
+    width: auto;
+    display: flex;
+    flex-direction: row-reverse;
+    min-width: auto;
+    gap: 5px;
+}
+
+.ctc-coupon-link-clicked.ctc-coupon-link .ctc-coupon-code {
+    min-width: 160px;
+    text-align: center;
+}
+
+.ctc-coupon-link-new {
+    text-decoration: none;
+    background: #0170b9;
+    color: white;
+    padding: 10px 30px;
+    display: inline-block;
+    border-radius: 4px;
+    text-decoration: none !important;
+    position: relative;
+    z-index: 13;
+}
+
+.ctc-coupon-link-new:after {
+    content: 'CTC36sE';
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 13;
+}
+
+.ctc-new {
+    text-decoration: none !important;
+    background: cornflowerblue;
+    color: white;
+    padding: 10px 30px;
+    display: inline-block;
+    border-radius: 3px;
+    left: -20px;
+    position: relative;
+    margin: -2px;
+    z-index: 10;
+}
+
+.ctc-coupon-cta {
+    position: relative;
+    border: 2px dashed cornflowerblue;
+    border-radius: 3px;
+}
+
+.ctc-new:hover {
+    color: white !important;
+    left: -40px;
+}
+
+.coupon-code {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+} */
+
+
+.ctc-coupon-code {
+    border: 2px dashed #0170b9;
+    padding: 10px 20px;
+    background: white;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.ctc-coupon-cta .ctc-block-copy {
+    display: none;
+}
+
+.ctc-coupon-cta {
+    position: relative;
+    display: inline-flex;
+    align-self: flex-start;
+}
+
+.ctc-block.ctc-coupon .ctc-coupon-link {
+    z-index: 999;
+    position: relative;
+    text-decoration: none;
+    background: #0170b9;
+    color: white;
+    padding: 10px 30px;
+    display: inline-block;
+    border: 2px solid #0170b9;
+    right: 30px;
+}
+
+.ctc-block.ctc-coupon .ctc-coupon-cta:hover .ctc-coupon-link {
+    right: 50px;
+}
+
+/** On Click */
+.ctc-coupon-clicked .ctc-coupon-cta .ctc-block-copy {
+    display: flex;
+}
+
+.ctc-coupon-clicked .ctc-coupon-cta .ctc-coupon-link {
+    display: none;
+}
+
+.ctc-coupon-clicked .ctc-coupon-code {
+    position: relative;
+}
+
+.ctc-coupon-clicked .ctc-coupon-cta {
+    gap: 15px;
+}
+
+@media all and (max-width: 768px) {
+    .ctc-coupon-header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .ctc-block.ctc-coupon .ctc-coupon-link {
+        margin-left: 30px;
+    }
+}

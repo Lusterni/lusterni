@@ -37,6 +37,9 @@ define( 'DB_CHARSET', 'utf8mb4' );
 /** The database collate type. Don't change this if in doubt. */
 define( 'DB_COLLATE', '' );
 
+/** Stack Overflower said to paste this here */
+define('FS_METHOD','direct');
+
 /**#@+
  * Authentication unique keys and salts.
  *
@@ -94,3 +97,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /** Sets up WordPress vars and included files. */
 require_once ABSPATH . 'wp-settings.php';
+
