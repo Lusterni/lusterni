@@ -115,14 +115,14 @@ class Coupon extends Widget_Base
         $image = $this->get_settings_for_display( 'image' );
         $heading = $this->get_settings_for_display( 'heading' );
         $description = $this->get_settings_for_display( 'description' );
-        $button_text = $this->get_settings_for_display( 'button_text' );
+        $slide_button_text = $this->get_settings_for_display( 'slide_button_text' );
         $coupon_code = $this->get_settings_for_display( 'coupon_code' );
         $button_link = $this->get_settings_for_display( 'button_link' );
         $link_target = $this->get_settings_for_display( 'link_target' );
         $details = $this->get_settings_for_display( 'details' );
         $toggle_details = $this->get_settings_for_display( 'toggle_details' );
-        $copy_button_text = $this->get_settings_for_display( 'copy_button_text' );
-        $copy_button_text_copied = $this->get_settings_for_display( 'copy_button_text_copied' );
+        $button_text = $this->get_settings_for_display( 'button_text' );
+        $button_text_copied = $this->get_settings_for_display( 'button_text_copied' );
         $show_icon = $this->get_settings_for_display( 'show_icon' );
         $icon_direction = $this->get_settings_for_display( 'icon_direction' );
         $display_slide_button = $this->get_settings_for_display( 'display_slide_button' );
@@ -179,7 +179,7 @@ class Coupon extends Widget_Base
             ?>" target="<?php 
             echo  esc_attr( $link_target ) ;
             ?>" class="ctc-coupon-link"><?php 
-            echo  esc_html( $button_text ) ;
+            echo  esc_html( $slide_button_text ) ;
             ?></a>
                     <?php 
         }
@@ -189,8 +189,8 @@ class Coupon extends Widget_Base
                     <?php 
         echo  Helpers::get_copy_button( [
             'as_raw'                  => 'no',
-            'copy_button_text'        => $copy_button_text,
-            'copy_button_text_copied' => $copy_button_text_copied,
+            'copy_button_text'        => $button_text,
+            'copy_button_text_copied' => $button_text_copied,
             'icon_direction'          => $icon_direction,
             'show_icon'               => $show_icon,
         ] ) ;
@@ -255,7 +255,7 @@ class Coupon extends Widget_Base
             'default' => 'Get up to 50% off on all products. Offer valid till <b>31st December 2020</b>.',
         ] );
         $this->end_controls_section();
-        $this->start_controls_section( 'button_section', [
+        $this->start_controls_section( 'coupon_button_section', [
             'label' => esc_html__( 'Coupon Code', 'copy-the-code' ),
         ] );
         $this->add_control( 'coupon_code', [
@@ -269,7 +269,7 @@ class Coupon extends Widget_Base
             'default' => 'yes',
         ] );
         // Button Text.
-        $this->add_control( 'button_text', [
+        $this->add_control( 'slide_button_text', [
             'label'     => esc_html__( 'Slide Button Text', 'copy-the-code' ),
             'type'      => Controls_Manager::TEXT,
             'default'   => esc_html__( 'Show Coupon Code', 'copy-the-code' ),
@@ -322,15 +322,15 @@ class Coupon extends Widget_Base
         /**
          * Group - Copy Button
          */
-        $this->start_controls_section( 'copy_button_section', [
+        $this->start_controls_section( 'button_section', [
             'label' => esc_html__( 'Copy Button', 'copy-the-code' ),
         ] );
-        $this->add_control( 'copy_button_text', [
+        $this->add_control( 'button_text', [
             'label'   => esc_html__( 'Copy Button Text', 'copy-the-code' ),
             'type'    => Controls_Manager::TEXT,
             'default' => esc_html__( 'Copy Code', 'copy-the-code' ),
         ] );
-        $this->add_control( 'copy_button_text_copied', [
+        $this->add_control( 'button_text_copied', [
             'label'   => esc_html__( 'After Copy Button Text', 'copy-the-code' ),
             'type'    => Controls_Manager::TEXT,
             'default' => esc_html__( 'Code Copied', 'copy-the-code' ),

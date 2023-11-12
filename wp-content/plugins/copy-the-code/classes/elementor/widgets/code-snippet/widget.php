@@ -233,7 +233,7 @@ class CodeSnippet extends Widget_Base
      */
     public function get_categories()
     {
-        return [ 'basic' ];
+        return [ 'copy-the-code' ];
     }
     
     /**
@@ -241,13 +241,13 @@ class CodeSnippet extends Widget_Base
      */
     public function get_keywords()
     {
-        return [
+        return Helpers::get_keywords( [
             'code',
             'snippet',
-            'code snippet',
-            'copy',
-            'paste'
-        ];
+            'copy code',
+            'copy snippet',
+            'copy code snippet'
+        ] );
     }
     
     /**
@@ -257,17 +257,10 @@ class CodeSnippet extends Widget_Base
     {
         $code_snippet = $this->get_settings_for_display( 'code_snippet' );
         $language = $this->get_settings_for_display( 'language' );
-        $copy_button_text = $this->get_settings_for_display( 'copy_button_text' );
-        $copy_button_text_copied = $this->get_settings_for_display( 'copy_button_text_copied' );
-        $show_icon = $this->get_settings_for_display( 'show_icon' );
-        $icon_direction = $this->get_settings_for_display( 'icon_direction' );
         $file_name = $this->get_settings_for_display( 'file_name' );
         $theme = $this->get_theme();
         $languages = $this->get_languages();
         $language = ( isset( $languages[$language] ) ? $languages[$language] : $language );
-        if ( empty($code_snippet) ) {
-            return;
-        }
         ?>
         <div class="ctc-block ctc-code-snippet <?php 
         echo  esc_attr( $theme ) ;
@@ -299,13 +292,7 @@ class CodeSnippet extends Widget_Base
             </div>
             <div class="ctc-block-actions">
                 <?php 
-        echo  Helpers::get_copy_button( [
-            'as_raw'                  => 'yes',
-            'copy_button_text'        => $copy_button_text,
-            'copy_button_text_copied' => $copy_button_text_copied,
-            'icon_direction'          => $icon_direction,
-            'show_icon'               => $show_icon,
-        ] ) ;
+        Helpers::render_copy_button( $this );
         ?>
             </div>
             <textarea class="ctc-copy-content" style="display: none;"><?php 
@@ -374,74 +361,10 @@ class CodeSnippet extends Widget_Base
             'rows'    => 10,
         ] );
         $this->end_controls_section();
-        $this->button();
-    }
-    
-    /**
-     * Button
-     */
-    protected function button()
-    {
-        /**
-         * Group - Button
-         */
-        $this->start_controls_section( 'copy_button_section', [
-            'label' => esc_html__( 'Button', 'copy-the-code' ),
+        // Copy Button Section.
+        Helpers::register_copy_button_section( $this, [
+            'button_text' => esc_html__( 'Copy Code Snippet', 'copy-the-code' ),
         ] );
-        $this->add_control( 'copy_button_text', [
-            'label'   => esc_html__( 'Button Text', 'copy-the-code' ),
-            'type'    => Controls_Manager::TEXT,
-            'default' => esc_html__( 'Copy to Clipboard', 'copy-the-code' ),
-        ] );
-        $this->add_control( 'copy_button_text_copied', [
-            'label'   => esc_html__( 'Button Text (After Copied)', 'copy-the-code' ),
-            'type'    => Controls_Manager::TEXT,
-            'default' => esc_html__( 'Copied to Clipboard', 'copy-the-code' ),
-        ] );
-        // Show Icon.
-        $this->add_control( 'show_icon', [
-            'label'        => esc_html__( 'Show Icon', 'copy-the-code' ),
-            'type'         => Controls_Manager::SWITCHER,
-            'label_on'     => esc_html__( 'Show', 'copy-the-code' ),
-            'label_off'    => esc_html__( 'Hide', 'copy-the-code' ),
-            'return_value' => 'yes',
-            'default'      => 'yes',
-        ] );
-        $this->add_control( 'icon_direction', [
-            'label'     => esc_html__( 'Icon Direction', 'copy-the-code' ),
-            'type'      => Controls_Manager::SELECT,
-            'default'   => 'before',
-            'options'   => [
-            'before' => esc_html__( 'Before', 'copy-the-code' ),
-            'after'  => esc_html__( 'After', 'copy-the-code' ),
-        ],
-            'condition' => [
-            'show_icon' => 'yes',
-        ],
-        ] );
-        $this->add_responsive_control( 'icon_text_gap', [
-            'label'      => esc_html__( 'Icon and Text Gap', 'copy-the-code' ),
-            'type'       => Controls_Manager::SLIDER,
-            'size_units' => [ 'px', 'em' ],
-            'range'      => [
-            'px' => [
-            'min' => 0,
-            'max' => 100,
-        ],
-            'em' => [
-            'min' => 0,
-            'max' => 10,
-        ],
-        ],
-            'selectors'  => [
-            '{{WRAPPER}} .ctc-with-icon' => 'gap: {{SIZE}}{{UNIT}};',
-        ],
-            'condition'  => [
-            'show_icon' => 'yes',
-        ],
-        ] );
-        $this->end_controls_section();
-        // Group - Button End.
     }
 
 }

@@ -11,6 +11,10 @@ namespace CopyTheCode\Elementor\Block;
 use  CopyTheCode\Helpers ;
 use  Elementor\Widget_Base ;
 use  Elementor\Controls_Manager ;
+use  Group_Control_Background ;
+use  Elementor\Group_Control_Typography ;
+use  Elementor\Group_Control_Border ;
+use  Elementor\Group_Control_Box_Shadow ;
 /**
  * Blockquote Block
  *
@@ -82,7 +86,7 @@ class Blockquote extends Widget_Base
      */
     public function get_name()
     {
-        return 'ctc_copy_blockquote';
+        return 'ctc_blockquote';
     }
     
     /**
@@ -90,7 +94,7 @@ class Blockquote extends Widget_Base
      */
     public function get_title()
     {
-        return esc_html__( 'Copy Blockquote', 'copy-the-code' );
+        return esc_html__( 'Blockquote', 'copy-the-code' );
     }
     
     /**
@@ -106,7 +110,7 @@ class Blockquote extends Widget_Base
      */
     public function get_categories()
     {
-        return [ 'basic' ];
+        return [ 'copy-the-code' ];
     }
     
     /**
@@ -114,15 +118,7 @@ class Blockquote extends Widget_Base
      */
     public function get_keywords()
     {
-        return [
-            'blockquote',
-            'quote',
-            'block',
-            'message',
-            'sms',
-            'wish',
-            'shayari'
-        ];
+        return Helpers::get_keywords( [ 'blockquote', 'quote' ] );
     }
     
     /**
@@ -131,15 +127,7 @@ class Blockquote extends Widget_Base
     public function render()
     {
         $blockquote = $this->get_settings_for_display( 'blockquote' );
-        $copy_text = $this->get_settings_for_display( 'copy_text' );
         $author = $this->get_settings_for_display( 'author' );
-        $copy_button_text = $this->get_settings_for_display( 'copy_button_text' );
-        $copy_button_text_copied = $this->get_settings_for_display( 'copy_button_text_copied' );
-        $show_icon = $this->get_settings_for_display( 'show_icon' );
-        $icon_direction = $this->get_settings_for_display( 'icon_direction' );
-        if ( empty($blockquote) ) {
-            return;
-        }
         $with_icon = ( 'yes' === $this->get_settings_for_display( 'show_icon' ) ? 'with-icon' : '' );
         ?>
         <div class="ctc-block ctc-blockquote">
@@ -155,18 +143,12 @@ class Blockquote extends Widget_Base
             </div>
             <div class="ctc-block-actions">
                 <?php 
-        echo  Helpers::get_copy_button( [
-            'as_raw'                  => 'yes',
-            'copy_button_text'        => $copy_button_text,
-            'copy_button_text_copied' => $copy_button_text_copied,
-            'icon_direction'          => $icon_direction,
-            'show_icon'               => $show_icon,
-        ] ) ;
+        Helpers::render_copy_button( $this );
         ?>
             </div>
-            <textarea class="ctc-copy-content" style="display: none;"><?php 
-        echo  esc_html( $copy_text ) ;
-        ?></textarea>
+            <?php 
+        Helpers::render_copy_content( $this );
+        ?>
         </div>
         <?php 
     }
@@ -176,21 +158,12 @@ class Blockquote extends Widget_Base
      */
     protected function _register_controls()
     {
-        /**
-         * Group: Copy Text Section
-         */
-        $this->start_controls_section( 'copy_text_section', [
-            'label' => esc_html__( 'Copy Text', 'copy-the-code' ),
-        ] );
-        $this->add_control( 'copy_text', [
-            'label'   => esc_html__( 'Copy Text', 'copy-the-code' ),
-            'type'    => Controls_Manager::TEXTAREA,
+        // Copy Content Section.
+        Helpers::register_copy_content_section( $this, [
             'default' => '"Top improve is to change; to be perfect is to change often."
 
 — WINSTON CHURCHILL',
-            'rows'    => 10,
         ] );
-        $this->end_controls_section();
         /**
          * Group: Blockquote Section
          */
@@ -209,65 +182,10 @@ class Blockquote extends Widget_Base
             'default' => '— WINSTON CHURCHILL',
         ] );
         $this->end_controls_section();
-        /**
-         * Group - Button
-         */
-        $this->start_controls_section( 'copy_button_section', [
-            'label' => esc_html__( 'Button', 'copy-the-code' ),
+        // Copy Button Section.
+        Helpers::register_copy_button_section( $this, [
+            'button_text' => esc_html__( 'Copy Blockquote', 'copy-the-code' ),
         ] );
-        $this->add_control( 'copy_button_text', [
-            'label'   => esc_html__( 'Button Text', 'copy-the-code' ),
-            'type'    => Controls_Manager::TEXT,
-            'default' => esc_html__( 'Copy Blockquote', 'copy-the-code' ),
-        ] );
-        $this->add_control( 'copy_button_text_copied', [
-            'label'   => esc_html__( 'After Copy Text', 'copy-the-code' ),
-            'type'    => Controls_Manager::TEXT,
-            'default' => esc_html__( 'Blockquote Copied!', 'copy-the-code' ),
-        ] );
-        // Show Icon.
-        $this->add_control( 'show_icon', [
-            'label'        => esc_html__( 'Show Icon', 'copy-the-code' ),
-            'type'         => Controls_Manager::SWITCHER,
-            'label_on'     => esc_html__( 'Show', 'copy-the-code' ),
-            'label_off'    => esc_html__( 'Hide', 'copy-the-code' ),
-            'return_value' => 'yes',
-            'default'      => 'yes',
-        ] );
-        $this->add_control( 'icon_direction', [
-            'label'     => esc_html__( 'Icon Direction', 'copy-the-code' ),
-            'type'      => Controls_Manager::SELECT,
-            'default'   => 'before',
-            'options'   => [
-            'before' => esc_html__( 'Before', 'copy-the-code' ),
-            'after'  => esc_html__( 'After', 'copy-the-code' ),
-        ],
-            'condition' => [
-            'show_icon' => 'yes',
-        ],
-        ] );
-        $this->add_responsive_control( 'icon_text_gap', [
-            'label'      => esc_html__( 'Icon and Text Gap', 'copy-the-code' ),
-            'type'       => Controls_Manager::SLIDER,
-            'size_units' => [ 'px', 'em' ],
-            'range'      => [
-            'px' => [
-            'min' => 0,
-            'max' => 100,
-        ],
-            'em' => [
-            'min' => 0,
-            'max' => 10,
-        ],
-        ],
-            'selectors'  => [
-            '{{WRAPPER}} .ctc-with-icon' => 'gap: {{SIZE}}{{UNIT}};',
-        ],
-            'condition'  => [
-            'show_icon' => 'yes',
-        ],
-        ] );
-        $this->end_controls_section();
     }
 
 }

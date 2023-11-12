@@ -1,9 +1,9 @@
 <?php
 /**
  * Plugin Name: Copy Anything to Clipboard
- * Plugin URI: https://github.com/maheshwaghmare/copy-the-code/
- * Description: Copy the Text or HTML into the clipboard 📋 (clipboard). You can use it for Blockquote, Wishes, Messages, Shayari, Offer Codes, Special Symbols, Code Snippets, Hidden Content, Or anything which you want 🥳. Read more about <a href="https://clipboard.agency/">Copy Anything to Clipboard</a>.
- * Version: 3.1.0
+ * Plugin URI: https://clipboard.agency/
+ * Description: Effortlessly Copy Text or HTML to Your Clipboard 📋 with Copy Anything to Clipboard. Whether it's Blockquotes, Wishes, Messages, Shayari, Offer Codes, Special Symbols, Code Snippets, Hidden Content, or anything else you desire, our plugin has you covered! 🥳 Explore the possibilities with <a href="https://clipboard.agency/">Copy Anything to Clipboard</a>.
+ * Version: 3.2.0
  * Author: Mahesh M. Waghmare
  * Author URI: https://clipboard.agency/
  * Text Domain: copy-the-code
@@ -21,7 +21,7 @@ if ( function_exists( 'ctc_fs' ) ) {
 } else {
 	// Set constants.
 	define( 'COPY_THE_CODE_TITLE', esc_html__( 'Copy Anything to Clipboard', 'copy-the-code' ) );
-	define( 'COPY_THE_CODE_VER', '3.1.0' );
+	define( 'COPY_THE_CODE_VER', '3.2.0' );
 	define( 'COPY_THE_CODE_FILE', __FILE__ );
 	define( 'COPY_THE_CODE_BASE', plugin_basename( COPY_THE_CODE_FILE ) );
 	define( 'COPY_THE_CODE_DIR', plugin_dir_path( COPY_THE_CODE_FILE ) );

@@ -39,6 +39,24 @@ class Blocks {
         }
 
         add_action( 'elementor/widgets/register', [ $this, 'register_widgets' ] );
+        add_action( 'elementor/elements/categories_registered', [ $this, 'register_category' ] );
+    }
+
+    /**
+     * Register category
+     * 
+     * @param object $elements_manager
+     * 
+     * @since 3.1.0
+     */
+    public function register_category( $elements_manager ) {
+        $elements_manager->add_category(
+            'copy-the-code',
+            [
+                'title' => esc_html__( 'Copy Anything to Clipboard', 'copy-the-code' ),
+                'icon' => 'fa fa-code',
+            ]
+        );
     }
 
     /**

@@ -128,8 +128,8 @@ class Sample extends Widget_Base
     public function render()
     {
         $sample_email = $this->get_settings_for_display( 'sample_email' );
-        $copy_button_text = $this->get_settings_for_display( 'copy_button_text' );
-        $copy_button_text_copied = $this->get_settings_for_display( 'copy_button_text_copied' );
+        $button_text = $this->get_settings_for_display( 'button_text' );
+        $button_text_copied = $this->get_settings_for_display( 'button_text_copied' );
         $show_icon = $this->get_settings_for_display( 'show_icon' );
         $icon_direction = $this->get_settings_for_display( 'icon_direction' );
         if ( empty($sample_email) ) {
@@ -149,8 +149,8 @@ class Sample extends Widget_Base
                 <?php 
         echo  Helpers::get_copy_button( [
             'as_raw'                  => 'yes',
-            'copy_button_text'        => $copy_button_text,
-            'copy_button_text_copied' => $copy_button_text_copied,
+            'copy_button_text'        => $button_text,
+            'copy_button_text_copied' => $button_text_copied,
             'icon_direction'          => $icon_direction,
             'show_icon'               => $show_icon,
         ] ) ;
@@ -193,15 +193,15 @@ class Sample extends Widget_Base
         /**
          * Group - Button
          */
-        $this->start_controls_section( 'copy_button_section', [
+        $this->start_controls_section( 'button_section', [
             'label' => esc_html__( 'Button', 'copy-the-code' ),
         ] );
-        $this->add_control( 'copy_button_text', [
+        $this->add_control( 'button_text', [
             'label'   => esc_html__( 'Button Text', 'copy-the-code' ),
             'type'    => Controls_Manager::TEXT,
             'default' => esc_html__( 'Copy to Clipboard', 'copy-the-code' ),
         ] );
-        $this->add_control( 'copy_button_text_copied', [
+        $this->add_control( 'button_text_copied', [
             'label'   => esc_html__( 'Button Text (After Copied)', 'copy-the-code' ),
             'type'    => Controls_Manager::TEXT,
             'default' => esc_html__( 'Copied to Clipboard', 'copy-the-code' ),

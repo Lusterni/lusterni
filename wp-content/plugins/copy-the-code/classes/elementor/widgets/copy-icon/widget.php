@@ -55,32 +55,26 @@ class CopyIcon extends Widget_Base
     
     public function get_title()
     {
-        return esc_html__( 'Copy Icon', 'copy-the-code' );
+        return esc_html__( 'Copy to Clipboard Icon', 'copy-the-code' );
     }
     
     public function get_icon()
     {
-        return 'eicon-copy';
+        return 'eicon-favorite';
     }
     
     public function get_categories()
     {
-        return [ 'basic' ];
+        return Helpers::get_categories();
     }
     
     public function get_keywords()
     {
-        return [
-            'copy',
-            'clipboard',
-            'content',
-            'icon'
-        ];
+        return Helpers::get_keywords( [ 'icon' ] );
     }
     
     public function render()
     {
-        $copy_text = $this->get_settings( 'copy_text' );
         ?>
         <span class="ctc-block ctc-copy-icon">
             <span class="ctc-block-copy ctc-block-copy-icon" role="button" aria-label="Copied">
@@ -91,25 +85,16 @@ class CopyIcon extends Widget_Base
         echo  Helpers::get_svg_checked_icon() ;
         ?>
             </span>
-            <textarea class="ctc-copy-content" style="display: none;"><?php 
-        echo  esc_html( $copy_text ) ;
-        ?></textarea>
+            <?php 
+        Helpers::render_copy_content( $this );
+        ?>
         </span>
         <?php 
     }
     
     protected function _register_controls()
     {
-        $this->start_controls_section( 'copy_text_section', [
-            'label' => esc_html__( 'Copy to Clipboard', 'copy-the-code' ),
-        ] );
-        $this->add_control( 'copy_text', [
-            'label'       => esc_html__( 'Enter Text to Copy to Clipboard', 'copy-the-code' ),
-            'type'        => Controls_Manager::TEXTAREA,
-            'rows'        => 10,
-            'description' => esc_html__( 'Enter the text you want to copy to the clipboard.', 'copy-the-code' ),
-        ] );
-        $this->end_controls_section();
+        Helpers::register_copy_content_section( $this );
     }
 
 }

@@ -105,7 +105,7 @@ class Generator extends Widget_Base
      */
     public function get_icon()
     {
-        return 'eicon-text-area';
+        return 'eicon-ai';
     }
     
     /**
@@ -113,7 +113,7 @@ class Generator extends Widget_Base
      */
     public function get_categories()
     {
-        return [ 'basic' ];
+        return Helpers::get_categories();
     }
     
     /**
@@ -121,7 +121,7 @@ class Generator extends Widget_Base
      */
     public function get_keywords()
     {
-        return [
+        return Helpers::get_keywords( [
             'chat',
             'gpt',
             'chatgpt',
@@ -129,7 +129,7 @@ class Generator extends Widget_Base
             'prompt',
             'prompts',
             'generator'
-        ];
+        ] );
     }
     
     /**
@@ -145,10 +145,10 @@ class Generator extends Widget_Base
         $length = $this->get_settings_for_display( 'length' );
         $format = $this->get_settings_for_display( 'format' );
         $output_heading = $this->get_settings_for_display( 'output_heading' );
-        $copy_button_text = $this->get_settings_for_display( 'copy_button_text' );
-        $copy_button_text_copied = $this->get_settings_for_display( 'copy_button_text_copied' );
-        $show_icon = $this->get_settings_for_display( 'show_icon' );
-        $icon_direction = $this->get_settings_for_display( 'icon_direction' );
+        $button_text = $this->get_settings_for_display( 'copy_button_text' );
+        $button_text_copied = $this->get_settings_for_display( 'copy_button_text_copied' );
+        $show_icon = $this->get_settings_for_display( 'copy_show_icon' );
+        $icon_direction = $this->get_settings_for_display( 'copy_icon_direction' );
         $display_task = $this->get_settings_for_display( 'display_task' );
         $display_topic = $this->get_settings_for_display( 'display_topic' );
         $display_style = $this->get_settings_for_display( 'display_style' );
@@ -288,27 +288,16 @@ class Generator extends Widget_Base
                 <textarea class="ctc-ai-prompt-generator-textarea" placeholder="Enter your prompt here..."></textarea>
             </div>
             <div class="ctc-block-actions">
-                <button class="ctc-ai-generator-button ctc-block-copy ctc-<?php 
-        echo  esc_attr( $with_icon ) ;
-        ?>" copy-as-raw='yes' data-copied="<?php 
-        echo  esc_html( $copy_button_text_copied ) ;
-        ?>">
-                    <?php 
-        
-        if ( 'before' === $icon_direction && 'yes' === $show_icon ) {
-            echo  Helpers::get_svg_copy_icon() ;
-            echo  Helpers::get_svg_checked_icon() ;
-        }
-        
-        echo  '<span class="ctc-button-text">' . esc_html( $copy_button_text ) . '</span>' ;
-        
-        if ( 'after' === $icon_direction && 'yes' === $show_icon ) {
-            echo  Helpers::get_svg_copy_icon() ;
-            echo  Helpers::get_svg_checked_icon() ;
-        }
-        
+                <?php 
+        echo  Helpers::get_copy_button( [
+            'show_icon'          => $show_icon,
+            'as_raw'             => 'yes',
+            'button_text'        => $button_text,
+            'button_class'       => 'ctc-ai-generator-button',
+            'button_text_copied' => $button_text_copied,
+            'icon_direction'     => $icon_direction,
+        ] ) ;
         ?>
-                </button>
             </div>
         </div>
         <?php 
@@ -475,65 +464,9 @@ class Generator extends Widget_Base
             'default' => esc_html__( 'Generated prompt:', 'copy-the-code' ),
         ] );
         $this->end_controls_section();
-        /**
-         * Group - Copy Button
-         */
-        $this->start_controls_section( 'copy_button_section', [
-            'label' => esc_html__( 'Copy Button', 'copy-the-code' ),
+        Helpers::register_copy_button_section( $this, [
+            'button_text' => esc_html__( 'Copy Prompt', 'copy-the-code' ),
         ] );
-        $this->add_control( 'copy_button_text', [
-            'label'   => esc_html__( 'Copy Button Text', 'copy-the-code' ),
-            'type'    => Controls_Manager::TEXT,
-            'default' => esc_html__( 'Copy Prompt', 'copy-the-code' ),
-        ] );
-        $this->add_control( 'copy_button_text_copied', [
-            'label'   => esc_html__( 'After Copy Button Text', 'copy-the-code' ),
-            'type'    => Controls_Manager::TEXT,
-            'default' => esc_html__( 'Copied', 'copy-the-code' ),
-        ] );
-        // Show Icon.
-        $this->add_control( 'show_icon', [
-            'label'        => esc_html__( 'Show Icon', 'copy-the-code' ),
-            'type'         => Controls_Manager::SWITCHER,
-            'label_on'     => esc_html__( 'Show', 'copy-the-code' ),
-            'label_off'    => esc_html__( 'Hide', 'copy-the-code' ),
-            'return_value' => 'yes',
-            'default'      => 'yes',
-        ] );
-        $this->add_control( 'icon_direction', [
-            'label'     => esc_html__( 'Icon Direction', 'copy-the-code' ),
-            'type'      => Controls_Manager::SELECT,
-            'default'   => 'before',
-            'options'   => [
-            'before' => esc_html__( 'Before', 'copy-the-code' ),
-            'after'  => esc_html__( 'After', 'copy-the-code' ),
-        ],
-            'condition' => [
-            'show_icon' => 'yes',
-        ],
-        ] );
-        $this->add_responsive_control( 'icon_text_gap', [
-            'label'      => esc_html__( 'Icon and Text Gap', 'copy-the-code' ),
-            'type'       => Controls_Manager::SLIDER,
-            'size_units' => [ 'px', 'em' ],
-            'range'      => [
-            'px' => [
-            'min' => 0,
-            'max' => 100,
-        ],
-            'em' => [
-            'min' => 0,
-            'max' => 10,
-        ],
-        ],
-            'selectors'  => [
-            '{{WRAPPER}} .ctc-with-icon' => 'gap: {{SIZE}}{{UNIT}};',
-        ],
-            'condition'  => [
-            'show_icon' => 'yes',
-        ],
-        ] );
-        $this->end_controls_section();
     }
 
 }

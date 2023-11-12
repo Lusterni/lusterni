@@ -1,44 +1,61 @@
 === Copy Anything to Clipboard ===
 Contributors: Mahesh901122, freemius
 Donate link: https://www.paypal.me/mwaghmare7/
-Tags: Clipboard, Copy, Paste, Copy to Clipboard, Copy Anything to Clipboard
-Tested up to: 6.3.2
-Stable tag: 3.1.0
+Tags: Clipboard, Copy, Copy to Clipboard, Coupon, Deal
+Tested up to: 6.4.1
+Stable tag: 3.2.0
 Requires PHP: 5.6
 Requires at least: 4.4
 
 == Description ==
 
-**[Copy Anything to Clipboard](https://clipboard.agency/)** is the #1 WordPress plugin with **1,31,346+** downloads 🚀
+Empower your WordPress site with the #1 clipboard content copy plugin, boasting an impressive 1,36,223+ downloads! 🚀 Elevate user experience and engagement effortlessly.
 
 ------
 
-**🎃 Halloween Special Offer 🎃**
+**[Copy Anything to Clipboard](https://clipboard.agency/)** is the #1 WordPress plugin with **1,36,223+** downloads 🚀
 
-Celebrate Halloween with us and enjoy spooktacular savings! Get a up-to [20 to 44% discount](https://clipboard.agency/#pricing). Don't miss out on this boo-tiful deal! 🕸️👻
+**🎉 Black Friday Special Offer 🎉**
 
-📅 Offer Valid: 15 October 2023 to 31 October 2023
-🛒 Use code: NOT REQUIRED
+Save big this Black Friday! Get up to [20% to 58% discount](https://clipboard.agency/#pricing) + an extra 30% discount using code FSBFCM2023. Offer valid from Nov 24 to Nov 27. Don't miss out! 🛍️✨
 
-[Grab your Halloween treats now](https://clipboard.agency/#pricing) and make this holiday extra special! 🎃
+📅 Offer Valid Till: November 27, 2023
+🛒 Use code: FSBFCM2023
+
+[Grab your Black Friday deals now](https://clipboard.agency/#pricing) and make this shopping extravaganza unforgettable! 🎁
 
 ------
 
 You can use plugin to copy anything including:
 
-- [Shortcode](https://clipboard.agency/#shortcode) 📋
-- [Inline Shortcode](https://clipboard.agency/#inline-shortcode) 📋
-- [Code Snippet](https://clipboard.agency/#code-snippet) 💻
-- [Email Sample](https://clipboard.agency/#email-sample) 📧
-- [Coupon Code](https://clipboard.agency/#coupon-code) 💰
-- [Deal](https://clipboard.agency/#deal) 💸
-- [Message](https://clipboard.agency/#message) 💬
-- [Blockquote](https://clipboard.agency/#blockquote) 📝
-- [Phone Number](https://clipboard.agency/#phone-number) 📞
-- [Email Address](https://clipboard.agency/#email-address) 📧
-- [AI Prompt Generator](https://clipboard.agency/#ai-prompt-generator) 🤖
-- [Copy with Icon](https://clipboard.agency/#copy-with-icon) 📋
-- [Copy with [Button]](https://clipboard.agency/#copy-with-button) 📋
+- [Email Samples](https://clipboard.agency/demos/#email-samples) 📧
+- [ChatGPT Prompt's (AI)](https://clipboard.agency/demos/#chatgpt-prompts-ai) 🤖
+- [Coupon Codes](https://clipboard.agency/demos/#coupon-codes) 💸
+- [Deals](https://clipboard.agency/demos/#deals) 🛍️
+- [Inspirational Quotes](https://clipboard.agency/demos/#inspirational-quotes) 🌟
+- [Contact Information](https://clipboard.agency/demos/#contact-information) 📞
+- [Addresses](https://clipboard.agency/demos/#addresses) 🏡
+- [Blog Posts](https://clipboard.agency/demos/#blog-posts) 📰
+- [Business Information](https://clipboard.agency/demos/#business-information) 🏢
+- [Social Media Posts](https://clipboard.agency/demos/#social-media-posts) 📱
+- [Notes and Reminders](https://clipboard.agency/demos/#notes-and-reminders) 📝
+- [Bookmarks](https://clipboard.agency/demos/#bookmarks) 📚
+- [Event Details](https://clipboard.agency/demos/#event-details) 🎉
+- [Travel Information](https://clipboard.agency/demos/#travel-information) ✈️
+- [Lyrics](https://clipboard.agency/demos/#lyrics) 🎵
+- [Meeting Notes](https://clipboard.agency/demos/#meeting-notes) 📅
+- [Technical Code](https://clipboard.agency/demos/#technical-code) 💻
+- [Commands](https://clipboard.agency/demos/#commands) 💻
+- [Legal Documents](https://clipboard.agency/demos/#legal-documents) 📜
+- [Quotes from Books](https://clipboard.agency/demos/#quotes-from-books) 📖
+- [To-Do Lists](https://clipboard.agency/demos/#to-do-lists) 📋
+- [Personal Notes](https://clipboard.agency/demos/#personal-notes) 📖
+- [Educational Content](https://clipboard.agency/demos/#educational-content) 🎓
+- [Passwords and Codes](https://clipboard.agency/demos/#passwords-and-codes) 🔒
+- [Social Media Hashtags ](https://clipboard.agency/demos/#social-media-hashtags-) ️⃣
+- [Research Findings](https://clipboard.agency/demos/#research-findings) 📊
+- [Travel Packing List](https://clipboard.agency/demos/#travel-packing-list) 🧳
+- [Love Messages](https://clipboard.agency/demos/#love-messages) 💖
 
 == # How to use
 
@@ -126,19 +143,34 @@ We build coupole of different widgets for Elementor page builder.
 
 You can use the following widgets to add the copy button to the specific element.
 
-- [Copy Icon](https://clipboard.agency/#copy-with-icon) 📋
-- [Copy Button](https://clipboard.agency/#copy-with-button) 📋
-- [Email Sample](https://clipboard.agency/#email-sample) 📧
-- [Email Address](https://clipboard.agency/#email-address) 📧
-- [Phone Number](https://clipboard.agency/#phone-number) 📞
-- [Blockquote](https://clipboard.agency/#blockquote) 📝
-- [Code Snippet](https://clipboard.agency/#code-snippet) 💻
-- [Message](https://clipboard.agency/#message) 💬
-- [SMS](https://clipboard.agency/#sms) 📱
-- [Wish](https://clipboard.agency/#wish) 🎉
-- [Deal](https://clipboard.agency/#deal) 💸
-- [Coupon](https://clipboard.agency/#coupon) 💰
-- [AI Prompt Generator](https://clipboard.agency/#ai-prompt-generator) 🤖
+- [Email Samples](https://clipboard.agency/demos/#email-samples) 📧
+- [ChatGPT Prompt's (AI)](https://clipboard.agency/demos/#chatgpt-prompts-ai) 🤖
+- [Coupon Codes](https://clipboard.agency/demos/#coupon-codes) 💸
+- [Deals](https://clipboard.agency/demos/#deals) 🛍️
+- [Inspirational Quotes](https://clipboard.agency/demos/#inspirational-quotes) 🌟
+- [Contact Information](https://clipboard.agency/demos/#contact-information) 📞
+- [Addresses](https://clipboard.agency/demos/#addresses) 🏡
+- [Blog Posts](https://clipboard.agency/demos/#blog-posts) 📰
+- [Business Information](https://clipboard.agency/demos/#business-information) 🏢
+- [Social Media Posts](https://clipboard.agency/demos/#social-media-posts) 📱
+- [Notes and Reminders](https://clipboard.agency/demos/#notes-and-reminders) 📝
+- [Bookmarks](https://clipboard.agency/demos/#bookmarks) 📚
+- [Event Details](https://clipboard.agency/demos/#event-details) 🎉
+- [Travel Information](https://clipboard.agency/demos/#travel-information) ✈️
+- [Lyrics](https://clipboard.agency/demos/#lyrics) 🎵
+- [Meeting Notes](https://clipboard.agency/demos/#meeting-notes) 📅
+- [Technical Code](https://clipboard.agency/demos/#technical-code) 💻
+- [Commands](https://clipboard.agency/demos/#commands) 💻
+- [Legal Documents](https://clipboard.agency/demos/#legal-documents) 📜
+- [Quotes from Books](https://clipboard.agency/demos/#quotes-from-books) 📖
+- [To-Do Lists](https://clipboard.agency/demos/#to-do-lists) 📋
+- [Personal Notes](https://clipboard.agency/demos/#personal-notes) 📖
+- [Educational Content](https://clipboard.agency/demos/#educational-content) 🎓
+- [Passwords and Codes](https://clipboard.agency/demos/#passwords-and-codes) 🔒
+- [Social Media Hashtags ](https://clipboard.agency/demos/#social-media-hashtags-) ️⃣
+- [Research Findings](https://clipboard.agency/demos/#research-findings) 📊
+- [Travel Packing List](https://clipboard.agency/demos/#travel-packing-list) 🧳
+- [Love Messages](https://clipboard.agency/demos/#love-messages) 💖
 
 ==== How to use with Elementor widgets?
 
@@ -151,7 +183,7 @@ You can use the following widgets to add the copy button to the specific element
 
 For more details read:
 
-- [Demos](https://clipboard.agency/#demos)
+- [See All Live Demos](https://clipboard.agency/#demos)
 
 == # Key Benefits
 
@@ -194,6 +226,15 @@ For more info check out the following:
 1. Install the <code>Copy Anything to Clipboard</code> plugin either via the WordPress plugin directory, or by uploading the files to your server at <code>wp-content/plugins</code>.
 
 == Changelog ==
+
+= 3.2.0 =
+* New: Added the Elementor widget category "Copy Anything to Clipboard".
+* Improvement: Compatibility to WordPress 6.4.1.
+* Improvement: Improved the Elementor "AI Prompt Generator" widget controls and structure.
+* Improvement: Improved the Elementor "Blockquote" widget controls and structure.
+* Improvement: Improved the Elementor "Code Snippet" widget controls and structure.
+* Improvement: Improved the Elementor "Copy to Clipboard Button" widget controls and structure.
+* Improvement: Improved the Elementor "Copy to Clipboard Icon" widget controls and structure.
 
 = 3.1.0 =
 * New: Added new shortcode [copy_inline] which allow you to copy content from the inline element.
@@ -264,6 +305,7 @@ For more info check out the following:
 
 * Improvement: Added the sub-menus page links into the post type screen.
 * Improvement: Removed the sub-menus Dashboard, Contact Us, Upgrade, and Support Forum.
+
 
 = 2.4.0 =
 

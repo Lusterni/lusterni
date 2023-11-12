@@ -61,3 +61,12 @@ add_action( 'wp_enqueue_scripts', 'muscat_styles' );
 // updater for WordPress.com themes
 if ( is_admin() )
 	include dirname( __FILE__ ) . '/inc/updater.php';
+
+function wpb_hook_javascript() {
+    ?>
+        <script>
+          // your javscript code goes
+        </script>
+    <?php
+}
+add_action('wp_head', 'wpb_hook_javascript');

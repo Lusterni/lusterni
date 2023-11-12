@@ -98,7 +98,7 @@ class Message extends Widget_Base
      */
     public function get_icon()
     {
-        return 'eicon-copy';
+        return 'eicon-testimonial';
     }
     
     /**
@@ -106,7 +106,7 @@ class Message extends Widget_Base
      */
     public function get_categories()
     {
-        return [ 'basic' ];
+        return [ 'copy-the-code' ];
     }
     
     /**
@@ -114,12 +114,7 @@ class Message extends Widget_Base
      */
     public function get_keywords()
     {
-        return [
-            'message',
-            'sms',
-            'wish',
-            'shayari'
-        ];
+        return Helpers::get_keywords( [ 'message' ] );
     }
     
     /**
@@ -226,15 +221,15 @@ HAPPY BIRTHDAY !!',
         /**
          * Group - Button
          */
-        $this->start_controls_section( 'copy_button_section', [
+        $this->start_controls_section( 'button_section', [
             'label' => esc_html__( 'Button', 'copy-the-code' ),
         ] );
-        $this->add_control( 'copy_button_text', [
+        $this->add_control( 'button_text', [
             'label'   => esc_html__( 'Button Text', 'copy-the-code' ),
             'type'    => Controls_Manager::TEXT,
             'default' => esc_html__( 'Copy to Clipboard', 'copy-the-code' ),
         ] );
-        $this->add_control( 'copy_button_text_copied', [
+        $this->add_control( 'button_text_copied', [
             'label'   => esc_html__( 'Button Text (After Copied)', 'copy-the-code' ),
             'type'    => Controls_Manager::TEXT,
             'default' => esc_html__( 'Copied to Clipboard', 'copy-the-code' ),
